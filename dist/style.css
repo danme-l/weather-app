@@ -1,0 +1,116 @@
+:root {
+    --main-color: whitesmoke;
+    --second-color: lightslategray;
+    --third-color: darkslategray; 
+    --fourth-color: rgb(236, 108, 76); /* color code for the icons from open weather*/
+    --main-font: 
+}
+
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.4em;
+}
+
+header {
+    color:var(--third-color);
+    background-color: var(--fourth-color);
+    height: 13vh;
+    padding: 10px;
+}
+
+input {
+    width: 40%;
+    /* margin-right: -8px; */
+    background-color: var(--main-color);
+    height: 1.2rem;
+}
+
+#city-search-btn {
+    background-color: var(--main-color);
+}
+
+#city-search-box {
+    color: var(--third-color);
+    background-color: var(--main-color);
+}
+
+main {
+    height: 79vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-color);
+}
+
+#upper-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#upper-section-left {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+    width: 50%;
+}
+
+.content-box {
+    padding: 7px;
+    margin-left: 3%;
+}
+
+#city-box {
+    font-size: 3em;
+    margin-bottom: -5px;
+}
+
+#temp-box {
+    border: 2px solid black;
+    box-shadow: 5px 5px var(--third-color);
+}
+
+.hidden {
+    visibility: hidden;
+    animation: fadeOut 1s;
+}
+
+.visible {
+    visibility: visible;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+/* footer */
+.project-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    line-height: 20%;
+    height: 7vh;
+    color:var(--main-color);
+    background-color: var(--fourth-color);
+}
+.fa-brands, .fa-circle-left {
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-brands:hover {
+    transform: rotate(360deg);
+}
+
+.fa-circle-left:hover {
+    transform: rotate(360deg);
+}
