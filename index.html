@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- For icons inline -->
+    <script src="https://kit.fontawesome.com/ba6c5b1f7d.js" crossorigin="anonymous"></script>
+    <title>Weather App!</title>
+</head>
+<body>
+    <header>
+        <div id="header-left">
+            <h1>Weather Finder</h1>
+            <input type="text" name="city-search-box" id="city-search-box" placeholder="Enter City"></input>
+            <button id="city-search-btn">Search!</button>
+        </div>
+        <div id="header-right">
+
+        </div>
+    </header>
+    <main id="main" class="hidden">
+        <div id="summary-view">
+            <div id="upper-section">
+                <div id="upper-section-left">
+                    <h1 class="content-box" id="city-box"></h1>
+                    <h2 class="content-box" id="date-box"></h2>
+                </div>
+                <div id="icon-spot"></div>
+            </div>       
+            <div id="weather-section">
+                <div class="content-box" id="temp-box"></div>
+            </div>
+        </div>       
+        
+    </main>
+    <footer class="project-footer">
+        <p>Dan Meleras <a href="https://github.com/danme-l"><i class="fa-brands fa-github"></i></a> || As part of the Odin Project Web Dev Curriculum</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
