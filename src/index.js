@@ -1,3 +1,5 @@
+import {cities} from './resources/world-cities.js'
+
 const WEATHER_API_KEY = '696cc74d66404171a01375b3553b06dd'; // weather API key
 const GIF_API_KEY = 'x32JUJ1NLu5c1INsYrJyRzLpBq8e8Dqs';
 
@@ -6,6 +8,8 @@ const citySearchBox = document.getElementById('city-search-box');
 citySearchBox.defaultValue = "Toronto";
 const citySearchBtn = document.getElementById('city-search-btn');
 const headerRight = document.getElementById('header-right');
+const randomCityBtn = document.getElementById('random-city-btn');
+randomCityBtn.addEventListener('click', getRandomCity);
 
 //content elements 
 const cityBox = document.getElementById('city-box');
@@ -25,9 +29,6 @@ async function getWeather(city) {
     const weatherData = await response.json();
     console.log(weatherData);
     return weatherData;
-    // return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`, {mode: 'cors'})
-    //     .then(response => response.json())
-    //     .then(json => (json.results))
 }
 
 function handleCityInput() {
@@ -86,3 +87,13 @@ function convertUnixDate(dt) {
     let dtCon = d.toLocaleString();
     return dtCon;
 };
+
+function getRandomCity() {
+    let city = cities[Math.floor(Math.random() * cities.length)]
+    console.log(city);
+    getWeather(city).then(data => {
+        console.log(data.name);
+        console.log(data.main);
+        updateView(data);
+    });
+}

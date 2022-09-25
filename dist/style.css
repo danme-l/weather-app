@@ -17,11 +17,17 @@ header {
     background-color: var(--fourth-color);
     height: 13vh;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#header-left {
+    flex-grow: 1.3;
 }
 
 input {
-    width: 40%;
-    /* margin-right: -8px; */
+    width: 50%;
     background-color: var(--main-color);
     height: 1.2rem;
 }
@@ -33,6 +39,17 @@ input {
 #city-search-box {
     color: var(--third-color);
     background-color: var(--main-color);
+}
+
+#header-right {
+    display: flex;
+    flex-direction: column;
+    align-self: bottom;
+}
+
+.header-right-btn {
+    padding: 5px;
+    margin: 4%;
 }
 
 main {
