@@ -49,7 +49,7 @@ function updateView(weatherData) {
     main.classList.replace('hidden', 'visible')
 
     // update DOM elements in main
-    cityBox.innerHTML = formatCityName(JSON.stringify(weatherData.name)) + "</br>"  
+    cityBox.innerHTML = formatPlaceName(JSON.stringify(weatherData.name)) + ', ' + formatPlaceName(JSON.stringify(weatherData.sys.country)) +  "</br>"  
     dateBox.innerHTML = convertUnixDate(weatherData.dt);
     tempBox.innerHTML = formatTemp(weatherData.main) + "</br>";
     iconSpot.innerHTML = '';
@@ -59,7 +59,7 @@ function updateView(weatherData) {
 }
 
 // string formatting functions
-function formatCityName(str) {
+function formatPlaceName(str) {
     // drop quote marks around the city name
     return str.replace(/['"]+/g, '');
 }
@@ -91,6 +91,7 @@ function convertUnixDate(dt) {
 function getRandomCity() {
     let city = cities[Math.floor(Math.random() * cities.length)]
     console.log(city);
+    main.classList.replace('visible', 'hidden');
     getWeather(city).then(data => {
         console.log(data.name);
         console.log(data.main);
