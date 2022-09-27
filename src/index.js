@@ -25,7 +25,7 @@ let weatherStore = {
 }
 
 async function getWeather(city) {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${WEATHER_API_KEY}`, {mode: 'cors'});
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${WEATHER_API_KEY}`, {mode: 'cors'});
     const weatherData = await response.json();
     console.log(weatherData);
     return weatherData;
