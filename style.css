@@ -13,8 +13,8 @@ body {
 }
 
 header {
-    color:var(--third-color);
-    background-color: var(--fourth-color);
+    color:var(--fourth-color);
+    background-color: var(--third-color);
     height: 13vh;
     padding: 10px;
     display: flex;
@@ -32,8 +32,13 @@ input {
     height: 1.2rem;
 }
 
-#city-search-btn {
+button {
+    color: var(--third-color);
     background-color: var(--main-color);
+}
+
+button:hover {
+    background-color: var(--fourth-color);
 }
 
 #city-search-box {
@@ -55,9 +60,10 @@ input {
 main {
     height: 79vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    background-color: var(--main-color);
+    justify-content: space-evenly;
+    color: var(--third-color);
 }
 
 #upper-section {
@@ -89,6 +95,11 @@ main {
     box-shadow: 5px 5px var(--third-color);
 }
 
+#map {
+    width: 500px;
+    height: 500px;
+}
+
 .hidden {
     visibility: hidden;
     animation: fadeOut 1s;
@@ -117,8 +128,8 @@ main {
     width: 100%;
     line-height: 20%;
     height: 7vh;
-    color:var(--main-color);
-    background-color: var(--fourth-color);
+    color:var(--fourth-color);
+    background-color: var(--third-color);
 }
 .fa-brands, .fa-circle-left {
     transition: transform 0.3s ease-in-out;
