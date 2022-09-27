@@ -1,10 +1,7 @@
 # Weather App
 ## For the Javascript Section in The Odin Project
-[Link](https://www.theodinproject.com/lessons/node-path-javascript-weather-app)
+[Prompt](https://www.theodinproject.com/lessons/node-path-javascript-weather-app)
 
-Work in Progress.
+[Live](https://danme-l.github.io/weather-app/)
 
-Functionality that I want to add:
-* Random City Function.
-* Map with current city indicator using [OpenLayers API](https://openlayers.org/), possible option to select city/coordinates by clicking the map
-* Weekly weather view & other weather statistics
+Work in Progress - nearly done. Still need to do some styling fixes with the map functionality.
