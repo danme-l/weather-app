@@ -50,7 +50,7 @@ function updateView(weatherData) {
 
     // update DOM elements in main
     cityBox.innerHTML = formatPlaceName(JSON.stringify(weatherData.name)) + ', ' + formatPlaceName(JSON.stringify(weatherData.sys.country)) +  "</br>"  
-    dateBox.innerHTML = convertUnixDate(weatherData.dt);
+    dateBox.innerHTML = convertUnixDate(weatherData.dt, weatherData.timezone);
     tempBox.innerHTML = formatTemp(weatherData.main) + "</br>";
     iconSpot.innerHTML = '';
     let weatherIcon = document.createElement('img');
@@ -81,11 +81,11 @@ function convertTemp(mode, temp) {
     }
 }
 
-function convertUnixDate(dt) {
-    let d = new Date(dt*1000);
-    // dtCon = d.getDate() + '/' + (d.getMonth()) + '/' + d.getFullYear() + " " + d.getHours() + ':' + d.getMinutes();
-    let dtCon = d.toLocaleString();
-    return dtCon;
+function convertUnixDate(dt, tzShift) {
+    let d = new Date((dt+tzShift)*1000);
+    let dtCon = d.getDate() + '/' + (d.getMonth()) + '/' + d.getFullYear() + " " + d.getHours() + ':' + d.getMinutes();
+    // let dtCon = d.toLocaleString();
+    return d
 };
 
 function getRandomCity() {
