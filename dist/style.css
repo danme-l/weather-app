@@ -1,3 +1,5 @@
+@import "../node_modules/ol/ol.css";
+
 :root {
     --main-color: whitesmoke;
     --second-color: lightslategray;
@@ -96,8 +98,17 @@ main {
 }
 
 #map {
-    width: 500px;
-    height: 500px;
+    width: 650px;
+    height: 650px;
+}
+
+.ol-attribution {
+    position: absolute;
+    bottom: 0;
+}
+
+.ol-rotate, .ol-attribution > button {
+    visibility: hidden;
 }
 
 .hidden {

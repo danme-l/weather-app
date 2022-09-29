@@ -34,7 +34,14 @@
                 <div class="content-box" id="temp-box"></div>
             </div>
         </div>
-        <div id="map"></div>       
+        <div id="map"></div> 
+        <script>
+            // Probably not the cleanest way to do this, but the simplest for now
+            // fixing map styling
+            let rotateBtn = Array.from(document.getElementsByClassName('ol-rotate'));
+            console.log(rotateBtn);
+            rotateBtn.parentNode.removeChild(rotateBtn);
+        </script>      
         
     </main>
     <footer class="project-footer">
