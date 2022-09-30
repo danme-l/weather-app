@@ -97,6 +97,7 @@ main {
     box-shadow: 5px 5px var(--third-color);
 }
 
+/* map styling fixes */
 #map {
     width: 650px;
     height: 650px;
@@ -111,6 +112,7 @@ main {
     visibility: hidden;
 }
 
+/* transitions */
 .hidden {
     visibility: hidden;
     animation: fadeOut 1s;
@@ -138,9 +140,14 @@ main {
     align-items: center;
     width: 100%;
     line-height: 20%;
-    height: 7vh;
+    height:10vh;
     color:var(--fourth-color);
     background-color: var(--third-color);
+    line-height: .8rem;
+}
+
+#attribution{
+    font-size: 0.7rem;
 }
 .fa-brands, .fa-circle-left {
     transition: transform 0.3s ease-in-out;
